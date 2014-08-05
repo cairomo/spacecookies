@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!--  
+                                               
+ .oooo.o oo.ooooo.   .oooo.    .ooooo.   .ooooo.  
+d88(      888' `88b `P  )88b  d88' `"Y8 d88   88b 
+`"Y88b.   888   888  .oP"888  888       888ooo888 
+o   )88b  888   888 d8(  888  888   .o8 888       
+8""888P'  888bod8P' `Y888""8o `Y8bod8P' `Y8bod8P  
+          888                                     
+         o888o                                    
+                                                  
+                              oooo         o8o                     
+                              `888                               
+ .ooooo.   .ooooo.   .ooooo.   888  oooo  oooo   .ooooo.   .oooo.o 
+d88' `"Y8 d88' `88b d88' `88b  888 .8P    `888  d88' `88b d88(  "8 
+888       888   888 888   888  888888.     888  888ooo888 `"Y88b.  
+888   .o8 888   888 888   888  888 `88b.   888  888    .o o.  )88b 
+`Y8bod8P' `Y8bod8P' `Y8bod8P' o888o o888o o888o `Y8bod8P' 8""888P' 
+                                                                             
+copyright (c) FRC Team 1868 Space Cookies 2006-2014
+
+-->
+
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<!-- if you have ie 6, love yourself pls :( -->
+    
+    
+    <head>
+    
+    <!-- GOOGLE ANALYTICS TRACKING CODE | DO NOT DELETE -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-21106093-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+        <!--[if lt IE 9]>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta charset="utf-8">
+
+	<link rel="shortcut icon" href="favicon.ico" >
+        
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+        <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <style>
+        .faq-section label,
+        .faq-section label:hover{
+            cursor: default;
+            background: #eee;
+        }        
+        body .faq-section p{ /* Increase specificity */
+            display: block;
+            color: #444;
+            font-size: 1em;
+            text-overflow: clip; 
+            white-space: normal;
+            overflow: visible;              
+        }
+    </style>
+<![endif]-->
+        
+        
+<style type="text/css">
+   
+body {
+    margin: 0px auto 0px auto;
+    font: 12px 'Roboto';
+    background: #E3F6FF;
+    color: #454545;
+    height:auto;
+    overflow-x: hidden;
+}
+
+#header {
+    height:150px;
+    width:100%;
+    background: #454545;
+    top:0;
+    position:absolute;  
+}
+
+#header h1 {
+    color:#E3F6FF;
+    font-size:48px;
+    font-weight:600;
+    padding-left:300px;
+    position:relative;
+    padding-top: 20px;
+}
+
+h1 p {
+    font-size:24px;
+    font-weight:300px;
+    padding-left:50px;
+    padding-top: 10px;
+    color: #999;
+    position:relative;
+}
+    
+h1 p a {
+    font-size: 24px;
+    font-weight: 300px;
+    top: -70px;
+    padding-left: 350px;
+    position: absolute;
+    color: #999;
+    text-decoration: none;
+    font-style: italic;
+}
+
+a:hover {
+    color: #8edbfe;
+    -webkit-transition: color .3s ease-in-out;
+   -moz-transition: color .3s ease-in-out;
+   -o-transition: color .3s ease-in-out;
+   transition: color .3s ease-in-out;  
+}
+
+#middle {
+    top:150px;
+    position:relative;
+    min-height:700px;
+    padding-bottom:150px;
+}
+
+#footer {
+    position:relative;
+    bottom:100;
+    background: #454545;
+    height:150px;
+    width:100%;
+}
+    
+#footer p {
+    color: #E3F6FF;
+    font-size: 14px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    padding-left:500px;
+    bottom:-75px;
+    position:relative;
+}
+
+/*Add some spacing*/
+.faq-section {
+    margin: 40px 0;
+    position: relative;
+    width:550px;
+    padding-left:300px;
+    overflow-x: hidden;
+}
+
+/*Hide the paragraphs*/
+.faq-section p {
+    display: none;
+}   
+
+/*Hide the checkboxes */
+.faq-section input{
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+    opacity: 0;         
+    display: none\9; /* IE8 and below */
+    margin: 0;          
+    width: 100%;
+    height: 36px;
+}
+
+
+/*Show only the clipped intro */
+.faq-section label  + p {
+    display: block; 
+    color: #999;
+    font-size: .95em;
+    font-weight: 300;
+    letter-spacing: 2px;
+    transition: all .15s ease-out;
+    /* Clipping text */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;    
+    padding: 0px 20px 0px 20px;
+}
+
+/*If the checkbox is checked, show all paragraphs*/
+.faq-section input[type=checkbox]:checked ~ p {
+    display: block;
+    color: #444;
+    font-size: 1em;
+    font-weight: 300;
+    letter-spacing: 2px;
+    padding: 0px 20px 0px 20px;
+    /* restore clipping defaults */
+    text-overflow: clip; 
+    white-space: normal;
+    overflow: visible;  
+}
+
+/*Style the label*/
+.faq-section label {
+    font-size: 1.2em;
+    background: #eee;
+    display: block;
+    position: relative;
+        height: 20px;
+    padding: 7px 10px;
+    font-weight: bold;
+    border: 1px solid #ddd;
+    border-left: 3px solid #888;
+    transition: all .15s ease-out;          
+}
+
+/*Remove text selection when toggle-ing*/
+.faq-section label::selection{
+    background: none;
+}
+
+.faq-section label:hover{
+    background: #f5f5f5;
+}
+
+/*If the checkbox is checked, style the label accordingly*/
+.faq-section input[type=checkbox]:checked ~ label{
+    border-color: #8edbfe;          
+    background: #454545;
+    color: #E3F6FF;
+}
+
+/*Label's arrow - default state */
+.faq-section label::before{
+    content: '';
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    margin-top: -6px;
+    border: 6px solid transparent;
+    border-left-color: inherit; 
+}
+
+/*Update the right arrow*/
+.faq-section input[type=checkbox]:checked ~ label::before{
+    border: 6px solid transparent;
+    border-top-color: inherit;
+    margin-top: -3px;
+    right: 10px;    
+} 
+    
+/* for 900px or less screens */
+@media screen and (max-width: 900px) {
+    .faq-section {
+        margin: 40px 0;
+        position: relative;
+        width:425px;
+        padding-left:75px;
+        word-wrap: normal;
+    }
+    
+    .faq-section label {
+        height:auto;
+    }
+    
+    .faq-section label  + p {   
+        padding: 0px 10px 0px 10px;
+    }
+    .faq-section input[type=checkbox]:checked ~ p {
+        letter-spacing: 1px;
+        padding: 0px 10px 0px 10px;
+    }
+  
+    #header h1 {
+        font-size:36px;
+        padding-left:50px;
+    }
+
+    h1 p {
+        font-size:18px;
+        padding-left:50px;
+        padding-top: 10px;
+    }
+
+    h1 p a {
+        font-size: 18px;
+        padding-left: 250px;
+        
+    }
+
+    #footer p {
+        font-size: 12px;
+        padding-left:150px;
+    }
+
+}
+    
+/* for 500px or less screens */
+@media screen and (max-width: 500px) {
+    .faq-section {
+        margin: 40px 0;
+        position: relative;
+        width:350px;
+        padding-left:50px;
+        word-wrap: normal;
+    }
+    
+    .faq-section label {
+        height:auto;
+    }
+    
+    .faq-section label  + p {   
+        padding: 0px 10px 0px 10px;
+    }
+    .faq-section input[type=checkbox]:checked ~ p {
+        letter-spacing: 1px;
+        padding: 0px 10px 0px 10px;
+    }
+  
+    #header h1 {
+        font-size:36px;
+        padding-left:50px;
+    }
+
+    h1 p {
+        font-size:18px;
+        padding-left:50px;
+        padding-top: 10px;
+    }
+
+    h1 p a {
+        font-size: 18px;
+        padding-left: 250px;
+        
+    }
+
+    #footer p {
+        font-size: 12px;
+        padding-left:150px;
+    }
+
+}
+    
+    
+</style>
+        
+    </head>
+<body>
+    <div id="header"><h1>FAQ<p><a href = "http://spacecookies.org">↞ go back</a></p></h1></div>
+    <div id="middle">
+            <!-- to add a new question, start copying now -->
+            <!-- 
+                <section class="faq-section">
+                <input type="checkbox" id="q1">
+                <label for="q1">Question?</label>           
+                <p>... The intro paragraph that will be clipped ...</p>
+                <p>... Extra and optional paragraph ...</p>
+                 </section> -->  
+            <!-- end copying -->
+            <section class="faq-section">
+            <input type="checkbox" id="q1">
+            <label for="q1">Do you need any experience to join the FRC Team or VEX team?</label>           
+            <p>No. For both programs, workshops are held during the year to teach the necessary skills needed for the program and robot building.</p>
+            </section>
+                
+            <section class="faq-section">
+            <input type="checkbox" id="q2">
+            <label for="q2">Where is the Space Cookies Program located?</label>           
+            <p>NASA Ames Research Center at Moffett Field in the San Francisco Bay Area.</p>
+            </section>
+
+            <section class="faq-section">
+            <input type="checkbox" id="q3">
+            <label for="q3">Do I need to be a Girl Scout to join?</label>           
+            <p>If you are a Girl Scout, great!  You can easily belong to more than one troop.</p>
+           <p>If you are not yet a Girl Scout, you can join Girl Scouts by joining one of the robotics troops. For FIRST Robotics, join Troop 62868. For VEX Robotics join 62768. You can join both.</p>
+            </section>
+
+            <section class="faq-section">
+            <input type="checkbox" id="q4">
+            <label for="q4">What ages are the girls on the FIRST FRC and VEX teams?</label>           
+            <p>FIRST FRC includes girls in grades 9 through 12. VEX includes girls in grades 7 through 12.</p>
+            </section>
+
+            <section class="faq-section">
+            <input type="checkbox" id="q5">
+            <label for="q5">What is the parent commitment level for FRC and VEX?</label>           
+            <p>Each program is a volunteer-run organization and parents are encouraged to participate in all areas of each program.</p>
+            </section>
+
+            <section class="faq-section">
+            <input type="checkbox" id="q6">
+            <label for="q6">Can a girl be on both FIRST FRC and VEX teams?</label>           
+            <p>Yes. Girls in grades 9-12 can be on both teams. Girls in 7th and 8th grades are eligible to join only VEX.</p>
+        <p>FIRST FRC is Girl Scout Troop #62868; VEX is Troop #62768. Girls on both teams are members of both troops.</p>
+            </section>
+    </div>
+    <div id="footer"><p>&copy; Space Cookies 2006-2014</p></div>
+    
+</body>
+    
+    
+</html>
