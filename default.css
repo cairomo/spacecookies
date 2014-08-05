@@ -29,7 +29,7 @@ g. misc
     top: 40px;
     left: 40px; right: 40px;
     height: 350px;
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0,0,0,0.2);
     z-index: 4;
     display: block;
 }
@@ -44,7 +44,7 @@ g. misc
     position: absolute;
     left: 281px; top: 121px;
     height: 50px; width: 50px;
-    background-color: rgba(255,255,255,.9);
+    background-color: rgba(255,255,255,.3);
     -webkit-border-radius: 60px;
     -moz-border-radius: 60px;
     border-radius: 60px;
@@ -55,6 +55,7 @@ g. misc
     -ms-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
 }
+
 #topoverlay .cont .imgoverlay a {
     display: block;
     text-align: center;
@@ -62,7 +63,7 @@ g. misc
     font-family: 'Roboto', sans-serif;
     font-size: 36px;
     font-weight: 100;
-    color: rgba(0,0,0,0.7)
+    color: rgba(0,0,0,0.2);
 }
 
 #topoverlay .cont .title {
@@ -83,7 +84,7 @@ g. misc
     font-family: 'Roboto Slab';
     font-weight: 300;
     font-size: 18px;
-    line-height: 18px;
+    line-height: 24px;
     letter-spacing: 1px;
     color: rgba(255,255,255,0.5);
     min-width: 300px;
@@ -91,6 +92,8 @@ g. misc
     height: 180px; overflow: hidden;
     padding-right: 50px;
 }
+
+
 /*----- stuff etc */
 div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -133,20 +136,74 @@ q:before, q:after {
  
 /*                  main          */
 html, body{ 
- margin:0; 
- padding:0px; 
-     background-color:#E3F6FF; 
+    margin:0; 
+    padding:0px; 
    font-family: 'Roboto';
    font-weight: normal;
-   font-size: 18px;
-   line-height: 30px;
+   font-size: 24px;
+   line-height: 36px;
 	color: #838C95;
-
    -webkit-font-smoothing: antialiased;
 	-webkit-text-size-adjust: 100%;
+    background-color:#E3F6FF;
 } 
  
-#pagewidth{ 
+html, body, #wrapper {
+    height:100%
+}
+
+body > #wrapper {
+    min-height:100%;
+    position:relative;
+}
+
+
+#down {
+   position: relative;
+    top: 410px;
+    left: 50%;
+    right: 50%;
+    width: 80px;
+    z-index: 10000;
+}
+ 
+#down a {
+    background: #E3F6FF;
+    line-height: 40px;
+    width: 80px;
+    height: 40px;
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    font-family: Roboto;
+    border-radius: 80px 80px 0 0;
+    color: #454545;
+}
+
+#down a:hover {
+    background: #454545;
+    color: #E3F6FF;
+     -webkit-transition: background-color .3s ease-in-out;
+   -moz-transition: background-color .3s ease-in-out;
+   -o-transition: background-color .3s ease-in-out;
+   transition: background-color .3s ease-in-out;
+     -webkit-transition: color .3s ease-in-out;
+   -moz-transition: color .3s ease-in-out;
+   -o-transition: color .3s ease-in-out;
+   transition: color .3s ease-in-out;
+}
+
+#scroll {
+    position: relative;
+    top: 410px;
+}
+
+#content {
+	padding-bottom:100px; /* Height of the footer element */
+    background-color: #fff;
+}
+
+#pagewidth { 
  width:100%; 
  text-align:left; 
  margin:0 auto; 
@@ -160,42 +217,86 @@ html, body{
  display:block;
  overflow:auto;
 } 
- 
-#leftcol{
+
+#middle {
+    background-color: #fff;
+    width: 100%;
+    top:625px;
+    height: 450px;
+    z-index: 3;
+}
+
+#middle .title {
+    position: absolute;
+    top: 500px;
+    padding-left: 170px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 48px;
+    color: #454545;
+    letter-spacing: 5px;
+    line-height:200px;
+    text-transform: uppercase;
+    padding-bottom:20px;
+    width:100%;
+    background-color: #fff;
+}
+
+
+#middle .description {
+    position: absolute;
+    top: 640px;
     font-family: 'Roboto Slab';
     font-weight: 300;
- width:50%; 
- float:right; 
- position:absolute; 
- top:440px;
- background-color:#E3F6FF; 
- padding:40px;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    color: #838C95;
+    height: 160px;
+    overflow: hidden;
+    padding-right: 150px;
+    padding-left: 200px;
+    width:100%;
+    background-color: #fff;
+}
+
+ 
+#leftcol {
+    font-family: 'Roboto Slab';
+    font-weight: 300;
+    width:50%; 
+    float:right; 
+    position:absolute; 
+    top:800px;
+    background-color:#E3F6FF; 
+    padding:40px;
     text-align:right; 
-    height:500px;
+    height:625px;
     -webkit-transition: background-color .3s ease-in-out;
    -moz-transition: background-color .3s ease-in-out;
    -o-transition: background-color .3s ease-in-out;
    transition: background-color .3s ease-in-out;
  }
 
-#twocols{
- width:50%; 
- float:right; 
- position:relative; 
-    background-color:#E3F6FF; 
-  }
+#twocols {
+     width:50%; 
+     float:right; 
+     position:relative;
+     background-color:#E3F6FF !important; 
+}
  
-#rightcol{
+#rightcol {
     font-family: 'Roboto Slab';
     font-weight: 300;
- width:100%; 
- float:left; 
- position:absolute; 
- top:440px;
- background-color:#E3F6FF;
- padding:40px;
+    width:50%; 
+    float:left;
+    right:0;
+    position:absolute; 
+    top:800px; // DOES NOT CHANGE, MOVES AUTOMATICALLY WITH THE ABOVE DIV
+    background-color:#E3F6FF !important;
+    padding:40px;
     text-align:left; 
-    height:500px;
+    height:625px;
      -webkit-transition: background-color .3s ease-in-out;
    -moz-transition: background-color .3s ease-in-out;
    -o-transition: background-color .3s ease-in-out;
@@ -203,18 +304,41 @@ html, body{
  }
  
 #rightcol:hover, #leftcol:hover {
+    color: #E3F6FF;
     background-color:#454545; 
+      -webkit-transition: color .3s ease-in-out;
+   -moz-transition: color .3s ease-in-out;
+   -o-transition: color .3s ease-in-out;
+   transition: color .3s ease-in-out;
     
 }
 
-.onHover {
+#rightcol:hover > h2 {
+    color: #E3F6FF;
+      -webkit-transition: color .3s ease-in-out;
+   -moz-transition: color .3s ease-in-out;
+   -o-transition: color .3s ease-in-out;
+   transition: color .3s ease-in-out;    
+}
+
+#leftcol:hover > h2 {
+    color: #E3F6FF;
+    background-color:#454545; 
+      -webkit-transition: color .3s ease-in-out;
+   -moz-transition: color .3s ease-in-out;
+   -o-transition: color .3s ease-in-out;
+   transition: color .3s ease-in-out;
+    
+}
+
+.onHover ~ h2 {
     -webkit-transition: background-color .3s ease-in-out;
    -moz-transition: background-color .3s ease-in-out;
    -o-transition: background-color .3s ease-in-out;
    transition: background-color .3s ease-in-out;
 }
 
-.onHover:hover {
+.onHover:hover ~ h2 {
     color: #E3F6FF;
      -webkit-transition: background-color .3s ease-in-out;
    -moz-transition: background-color .3s ease-in-out;
@@ -222,21 +346,22 @@ html, body{
    transition: background-color .3s ease-in-out;
 }
 
-#footer{
- height:100px; 
+#footer {
+    height:100px; 
     width:100%;
-  background-color:#454545; 
- clear:both;
- display:block;
- overflow:auto;
+    background-color:#454545; 
+    overflow:hidden;
     position:absolute;
-    top: 940px;
+    top: 1325px;
     font-size:14px;
     padding:40px;
+    clear: both;
+    z-index: 10;
 } 
- 
 
- 
+.logo {
+    margin-right:200px;
+}
  
 .clearfix:after {
  content: "."; 
@@ -280,13 +405,14 @@ height: 0;
 
 
 h1, h2, h3, h4, h5, h6 {
-   color: #313131;
+   color: #000000;
 	font-family: 'Roboto';
    font-weight: 400;
+    font-size: 48px;
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
 h1 { font-size: 38px; line-height: 42px; margin-bottom: 12px; letter-spacing: -1px; }
-h2 { font-size: 28px; line-height: 36px; margin-bottom: 6px; }
+h2 { font-size: 36px; line-height: 48px; margin-bottom: 6px; }
 h3 { font-size: 22px; line-height: 30px; margin-bottom: 12px; }
 
 .subheader { }
