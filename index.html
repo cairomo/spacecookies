@@ -29,6 +29,32 @@ copyright (c) FRC Team 1868 Space Cookies 2006-2014
 <!-- if you have ie 6, love yourself pls :( -->
 <head>
 
+    
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+ 
+    <!-- Load ScrollTo --><script type="text/javascript" src="http://flesler-plugins.googlecode.com/files/jquery.scrollTo-1.4.2-min.js"></script>
+ 
+    <!-- Load LocalScroll -->
+<script type="text/javascript" src="http://flesler-plugins.googlecode.com/files/jquery.localscroll-1.2.7-min.js"></script>
+ 
+<script type="text/javascript">
+    $(document).ready(function () {  
+        $.localScroll();       
+    });
+</script>
+    
+    <!-- GOOGLE ANALYTICS TRACKING CODE | DO NOT DELETE -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-21106093-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    
    <meta charset="utf-8">
 
 	<link rel="shortcut icon" href="favicon.ico" >
@@ -50,7 +76,7 @@ copyright (c) FRC Team 1868 Space Cookies 2006-2014
 
 
 <body>
-
+<div id = "wrapper">
 	
     <div id="top">
 
@@ -58,7 +84,7 @@ copyright (c) FRC Team 1868 Space Cookies 2006-2014
 
 function random_imglink() {
     var myimages=new Array()
-   // myimages[1]="topimage.jpg"
+    myimages[1]="front.png"
    // myimages[2]="http://first.spacecookies.org/topimage2.jpg"
     
     var ry=Math.floor(Math.random()*myimages.length) // this is kind of a cheating slider
@@ -68,37 +94,34 @@ function random_imglink() {
 }
 random_imglink()
 </script></div> 
- <div id="topoverlay">
-     <div class="cont">
-         <div class="title">Space Cookies Robotics</div>
-         <div class="description"><p>Space Cookies is an all-girls robotics program sponsored by Girl Scouts and NASA for 7th–12th graders in the Bay Area. The STEM-based programs provide a hands-on learning environment for robot design, fabrication, and programming as well as leadership, collaboration, and community outreach. In both programs, FIRST and VEX, girls of all skill and experience levels are welcome and invited.
-</p></div>
-     </div>
-</div>
+        <div id="down"><a href="#scroll">▾</a></div>
 </div>   
-      <!--start columns  -->
-<div id="wrapper" class="clearfix">
-		<div id="twocols"> 
-			<div class = "onHover" id="rightcol"><a href ="http://vex.spacecookies.org"><h2><div class = "onHover">VEX Robotics</div></h2> 
-                <ul>Open to girls 7th - 12th grade</ul>
-                <ul>VEX Robotics Program (link?)</ul>
-                <ul>Girls form up to 10 girl teams working on robots</ul>
-                <ul>Robotics season: year round</ul><br>
-                <ul>Girl Scout Troop 62768</ul>               
-                <p>[some image maybe]</p></a></div>
-		</div> 
-		<div class = "onHover" id="leftcol"><a href ="http://frc.spacecookies.org"><h2><div class = "onHover">FIRST FRC Robotics</div></h2>
-                <ul>Open to girls 9th - 12th grade</ul>
-                <ul>FIRST Robotics Program (link?)</ul>
-                <ul>Girls are part of one team working on a robot</ul>
-                <ul>Robotics season: January - April, with off season workshops August - December</ul>
-                <ul>Girl Scout Troop 62868</ul>
-</p><p>[some image maybe]</p></a></div>
-	</div>
-
+    <div id = "scroll"></div>
+    <div id = "middle">
+    <div class="title">Space Cookies Robotics <img src = "gs.png"> <img src = "nasa.png"></div>
+         <div class="description"><p>Space Cookies, an all-girls robotics program sponsored by Girl Scouts and NASA, encourages hands-on design, fabrication, and programming. We welcome girls of all skill and experience levels.
+</p></div>
     
-	<div id="footer"><p> &copy; Copyright 2014 Space Cookies &nbsp;&nbsp; </p></div>
-<!-- i wanted to include some social media links here w font awesome but it's 2am -->
+    </div>
+    
+      <!--start columns  -->
+<div id="content" class="clearfix">
+        <div class = "onHover" id="rightcol" bgcolor="#E3F6FF"><a href ="http://vex.spacecookies.org"><h2>VEX Robotics</h2> 
+                <ul>Open to girls 7th - 12th grade</ul>
+                <ul>Multiple teams, multiple robots</ul>
+                <ul>Girl Scout Troop 62768</ul>               
+                <p><img src = "vex.png" width = "175px"></p></a></div>
+		<div class = "onHover" id="leftcol"><a href ="http://frc.spacecookies.org"><h2>FIRST FRC Robotics</h2>
+                <ul>Open to girls 9th - 12th grade</ul>
+                <ul>One team, one robot</ul>
+                <ul>Girl Scout Troop 62868</ul>
+<p><img src = "frc.png" width = "175px"></p></a></div>
+	</div>
+	
+</div>
+    <div id="footer"><center>&copy; Copyright 2014 Space Cookies</center></div>
+<!-- THIS WEBSITE IS FINALLY FINISHED -->
+    <!-- s2g if you look up the dictionary definition for pain, you'll see my face and a screenshot of this website -->
 </body>
 
 </html>
